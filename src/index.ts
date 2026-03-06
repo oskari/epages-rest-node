@@ -1,5 +1,5 @@
-export { EpagesClient } from "./client.js";
 export type { RequestMethod, RequestOptions } from "./client.js";
+export { EpagesClient } from "./client.js";
 export {
   ApiError,
   ConfigurationError,
@@ -11,10 +11,10 @@ export {
   type RestClientOptions,
 } from "./rest.js";
 export type {
+  ClientDefaults,
   ClientOptions,
   CustomersListParams,
   JsonPatchOperation,
-  ClientDefaults,
   OrdersGetParams,
   OrdersListParams,
   PagedResponse,

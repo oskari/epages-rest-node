@@ -2,7 +2,7 @@ import { ConfigurationError } from "./errors.js";
 import { createCustomersResource } from "./resources/customers.js";
 import { createOrdersResource } from "./resources/orders.js";
 import { createProductsResource } from "./resources/products.js";
-import { type RestClient, createRestClient } from "./rest.js";
+import { createRestClient, type RestClient } from "./rest.js";
 import type { ClientOptions } from "./types.js";
 
 export type RequestMethod = "GET" | "POST" | "PATCH" | "PUT" | "DELETE";
