@@ -1,0 +1,130 @@
+{
+  "priceInfo": {
+    "price": {
+      "taxType": "GROSS",
+      "formatted": "149.99 €",
+      "amount": 149.99,
+      "currency": "EUR"
+    },
+    "quantity": {
+      "amount": 1,
+      "unit": "piece(s)"
+    }
+  },
+  "bulkPriceInfo": [
+    {
+      "quantity": {
+        "amount": 2,
+        "unit": "piece(s)"
+      },
+      "price": {
+        "taxType": "GROSS",
+        "formatted": "117.00 €",
+        "amount": 117,
+        "currency": "EUR"
+      },
+      "basePrice": null,
+      "priceSavings": {
+        "percent": {
+          "formatted": "10 %",
+          "percentage": 10.0
+        },
+        "regularBulkPrice": {
+          "taxType": "GROSS",
+          "formatted": "130.00 €",
+          "amount": 130,
+          "currency": "EUR"
+        }
+      }
+    },
+    {
+      "quantity": {
+        "amount": 1,
+        "unit": "piece(s)"
+      },
+      "price": {
+        "taxType": "GROSS",
+        "formatted": "135.00 €",
+        "amount": 135,
+        "currency": "EUR"
+      },
+      "basePrice": null,
+      "priceSavings": {
+        "percent": {
+          "formatted": "10 %",
+          "percentage": 10.0
+        },
+        "regularBulkPrice": {
+          "taxType": "GROSS",
+          "formatted": "150.00 €",
+          "amount": 150,
+          "currency": "EUR"
+        }
+      }
+    }
+  ],
+  "customerSpecificPriceInfo": [
+    {
+      "customerGroup": "KG1",
+      "customerGroupId": "63E4F781-CDA5-327F-B72B-C0A802027724",
+      "priceInfo": [
+        {
+          "quantity": {
+            "amount": 1,
+            "unit": "piece(s)"
+          },
+          "price": {
+            "taxType": "GROSS",
+            "formatted": "135.00 €",
+            "amount": 135,
+            "currency": "EUR"
+          },
+          "basePrice": null,
+          "priceSavings": {
+            "percent": {
+              "formatted": "10 %",
+              "percentage": 10.0
+            },
+            "regularBulkPrice": {
+              "taxType": "GROSS",
+              "formatted": "150.00 €",
+              "amount": 150,
+              "currency": "EUR"
+            }
+          }
+        },
+        {
+          "quantity": {
+            "amount": 5,
+            "unit": "piece(s)"
+          },
+          "price": {
+            "taxType": "GROSS",
+            "formatted": "120.00 €",
+            "amount": 120,
+            "currency": "EUR"
+          },
+          "basePrice": null,
+          "priceSavings": {
+            "percent": {
+              "formatted": "0 %",
+              "percentage": 0.0
+            },
+            "regularBulkPrice": {
+              "taxType": "GROSS",
+              "formatted": "120.00 €",
+              "amount": 120,
+              "currency": "EUR"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "rel": "product",
+      "href": "https://pm.epages.com/rs/shops/apidocu/products/54EAF9A4-F2ED-BCBF-372B-0A0C05E6CF70"
+    }
+  ]
+}

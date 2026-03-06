@@ -1,0 +1,230 @@
+{
+  "productId": "51E7F905-2E4C-78C2-30C2-AC14145FA4E5",
+  "name": "BRAND NEW: Dr.Boom - Star Wars Edition",
+  "visible": true,
+  "productVariationType": "regular",
+  "productVariationMasterName": null,
+  "productVariationMasterId": null,
+  "manufacturerProductNumber": "HP-003",
+  "productLength": null,
+  "productWidth": null,
+  "productHeight": null,
+  "productVariationSelection": null,
+  "shortDescription": "new arrival",
+  "description": "<ul>\n\t<li>Surround Sound</li>\n\t<li>Acoustic Noise Canceling</li>\n\t<li>Correct fit",
+  "title": "BRAND NEW: Dr.Boom - Star Wars Edition - Technic365",
+  "productImage": "014-headphone-starwars.jpg",
+  "images": [
+    {
+      "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_h.jpg",
+      "classifier": "HotDeal",
+      "isZoomEnabled": true,
+      "width": 149,
+      "height": 84,
+      "fileSize": 5168
+    },
+    {
+      "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_m.jpg",
+      "classifier": "Medium",
+      "isZoomEnabled": true,
+      "width": 500,
+      "height": 281,
+      "fileSize": 47289
+    },
+    {
+      "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red.jpg",
+      "classifier": "Large",
+      "isZoomEnabled": true,
+      "width": 1920,
+      "height": 1080,
+      "fileSize": 636262
+    },
+    {
+      "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_s.jpg",
+      "classifier": "Small",
+      "isZoomEnabled": true,
+      "width": 100,
+      "height": 56,
+      "fileSize": 2498
+    },
+    {
+      "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_xs.jpg",
+      "classifier": "Thumbnail",
+      "isZoomEnabled": true,
+      "width": 50,
+      "height": 28,
+      "fileSize": 1031
+    }
+  ],
+  "priceInfo": {
+    "quantity": {
+      "amount": 1,
+      "unit": "piece(s)"
+    },
+    "taxClass": {
+      "name": "standard",
+      "percentage": 19
+    },
+    "price": {
+      "taxType": "GROSS",
+      "formatted": "54.62 €",
+      "amount": 54.62,
+      "currency": "EUR"
+    },
+    "depositPrice": null,
+    "priceWithDeposits": {
+      "taxType": "GROSS",
+      "formatted": "54.62 €",
+      "amount": 54.62,
+      "currency": "EUR"
+    },
+    "lowestPrice": null,
+    "lowestRefPriceFormatted": null,
+    "highestPrice": null,
+    "manufacturerPrice": null,
+    "basePrice": null
+  },
+  "bulkPriceInfo": [
+    {
+      "quantity": {
+        "amount": 2,
+        "unit": "piece(s)"
+      },
+      "price": {
+        "taxType": "GROSS",
+        "formatted": "54,00 €",
+        "amount": 54,
+        "currency": "EUR"
+      },
+      "basePrice": null,
+      "priceSavings": null
+    },
+    {
+      "quantity": {
+        "amount": 3,
+        "unit": "piece(s)"
+      },
+      "price": {
+        "taxType": "GROSS",
+        "formatted": "53,00 €",
+        "amount": 53,
+        "currency": "EUR"
+      },
+      "basePrice": null,
+      "priceSavings": null
+    }
+  ],
+  "customerSpecificPriceInfo": [
+    {
+      "customerGroup": "KG1",
+      "customerGroupId": "63E4F781-CDA5-327F-B72B-C0A802027724",
+      "priceInfo": [
+        {
+          "quantity": {
+            "amount": 5,
+            "unit": "piece(s)"
+          },
+          "price": {
+            "taxType": "GROSS",
+            "formatted": "50.00 €",
+            "amount": 50,
+            "currency": "EUR"
+          },
+          "basePrice": null,
+          "priceSavings": {
+            "percent": {
+              "formatted": "10 %",
+              "percentage": 10.0
+            },
+            "regularBulkPrice": {
+              "taxType": "GROSS",
+              "formatted": "55.00 €",
+              "amount": 55,
+              "currency": "EUR"
+            }
+          }
+        },
+        {
+          "quantity": {
+            "amount": 10,
+            "unit": "piece(s)"
+          },
+          "price": {
+            "taxType": "GROSS",
+            "formatted": "45.00 €",
+            "amount": 45,
+            "currency": "EUR"
+          },
+          "basePrice": null,
+          "priceSavings": {
+            "percent": {
+              "formatted": "0 %",
+              "percentage": 0.0
+            },
+            "regularBulkPrice": {
+              "taxType": "GROSS",
+              "formatted": "45.00 €",
+              "amount": 45,
+              "currency": "EUR"
+            }
+          }
+        }
+      ]
+    }
+  ],
+
+  "forSale": true,
+  "specialOffer": false,
+  "deliveryWeight": {
+    "amount": 260,
+    "unit": "g"
+  },
+  "shippingMethodsRestrictedTo": null,
+  "availabilityText": "In stock<br />can be shipped within 3-5 days",
+  "availability": "OnStock",
+  "energyLabelsString": "A+++,G",
+  "energyLabelsMaxEfficiencyString": "A+++",
+  "energyLabelSourceFile": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/Products/be_40401/label-1-9dee74f24e1.png",
+  "productDataSheet": null,
+  "sfUrl": "http://pm.epages.com/epages/apidocu.sf/?ObjectPath=/Shops/apidocu/Products/HP-003",
+  "productNumber": "HP-003",
+  "isProductNumberVisible": true,
+  "isNew": false,
+  "isManufacturerPriceRRP": true,
+  "isShippingLinkVisible": true,
+  "isCustomizable": true,
+  "customizableTextLength": 50,
+  "customizableHeadlineText": "Customize your product",
+  "newnessDate": "2023-08-08T00:00:00Z",
+  "refAmount": 1,
+  "refUnit": "piece",
+  "refContentAmount": 1,
+  "priceQuantity": 1,
+  "orderUnit": "piece(s)",
+  "minOrder": 1,
+  "intervalOrder": 1,
+  "productCode": "Z-108-002",
+  "manufacturer": "Bass by Dr.Boom",
+  "upc": null,
+  "ean": null,
+  "essentialFeatures": null,
+  "searchKeywords": ["Brilliant Sound", "Noise Canceling", "Carrying Box"],
+  "stocklevel": 100,
+  "minStocklevel": 10,
+  "isInWishlist": false,
+  "videos": [],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://pm.epages.com/rs/shops/apidocu/products/51E7F905-2E4C-78C2-30C2-AC14145FA4E5"
+    },
+    {
+      "rel": "categories",
+      "href": "https://pm.epages.com/rs/shops/apidocu/categories/?productId=51E7F905-2E4C-78C2-30C2-AC14145FA4E5"
+    },
+    {
+      "rel": "producttype",
+      "href": "https://pm.epages.com/rs/shops/apidocu/producttypes/6489A241-7B85-54B0-0B69-C0A8020205ED"
+    }
+  ]
+}

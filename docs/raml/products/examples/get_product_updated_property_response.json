@@ -1,0 +1,266 @@
+{
+  "results": 1,
+  "page": 1,
+  "resultsPerPage": 10,
+  "items": [
+    {
+      "item": {
+        "productId": "51E7F905-2E4C-78C2-30C2-AC14145FA4E5",
+        "name": "Dr.Boom - Red Power",
+        "visible": true,
+        "productVariationType": "regular",
+        "productVariationMasterName": null,
+        "productVariationMasterId": null,
+        "manufacturerProductNumber": "HP-003",
+        "productLength": null,
+        "productWidth": null,
+        "productHeight": null,
+        "productVariationSelection": null,
+        "shortDescription": "<p>Red Resonator S&nbsp;headphones are the best-performing around-ear headphones from&nbsp;Dr.Boom. They give you fresh and&nbsp;powerful sound.&nbsp;These headphones definitely&nbsp;let you hear your music better!</p>",
+        "deliveryPeriod": "3-5",
+        "description": "<p><strong><em>Dr.Boom - HP001</em></strong>&nbsp;Red Resonator S&nbsp;headphones are the best-performing around-ear headphones from&nbsp;Dr.Boom. They give you fresh and&nbsp;powerful sound.&nbsp;These headphones definitely&nbsp;let you hear your music better!</p>\r\n\r\n<p>The noise canceling technology monitors the noise around you and cancels it out, helping you focus on what you want to hear -&nbsp;whether it's music, calls or simply peace and quiet. These headphones look as good as they sound. They're comfy, durably made and easily to store, with earcups that&nbsp;fit in a small carrying box.</p>",
+        "title": "Dr.Boom - Red Power - Technic365",
+        "images": [
+          {
+            "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_h.jpg",
+            "classifier": "HotDeal",
+            "isZoomEnabled": false,
+            "width": 0,
+            "height": 0,
+            "fileSize": 0
+          },
+          {
+            "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_m.jpg",
+            "classifier": "Medium",
+            "isZoomEnabled": false,
+            "width": 0,
+            "height": 0,
+            "fileSize": 0
+          },
+          {
+            "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red.jpg",
+            "classifier": "Large",
+            "isZoomEnabled": false,
+            "width": 0,
+            "height": 0,
+            "fileSize": 0
+          },
+          {
+            "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_s.jpg",
+            "classifier": "Small",
+            "isZoomEnabled": false,
+            "width": 0,
+            "height": 0,
+            "fileSize": 0
+          },
+          {
+            "url": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_xs.jpg",
+            "classifier": "Thumbnail",
+            "isZoomEnabled": false,
+            "width": 0,
+            "height": 0,
+            "fileSize": 0
+          }
+        ],
+        "priceInfo": {
+          "quantity": {
+            "amount": 1,
+            "unit": "piece(s)"
+          },
+          "taxClass": {
+            "taxClassId": "5446685F-A8AF-0E18-9B4F-D5809AB30FBF",
+            "name": "standard",
+            "percentage": 19
+          },
+          "price": {
+            "taxType": "GROSS",
+            "formatted": "54.62 €",
+            "amount": 54.62,
+            "currency": "EUR"
+          },
+          "depositPrice": null,
+          "ecoParticipationPrice": null,
+          "priceWithDeposits": {
+            "taxType": "GROSS",
+            "formatted": "54.62 €",
+            "amount": 54.62,
+            "currency": "EUR"
+          },
+          "lowestPrice": null,
+          "lowestRefPriceFormatted": null,
+          "highestPrice": null,
+          "manufacturerPrice": null,
+          "basePrice": null
+        },
+        "bulkPriceInfo": [
+          {
+            "quantity": {
+              "amount": 2,
+              "unit": "piece(s)"
+            },
+            "price": {
+              "taxType": "GROSS",
+              "formatted": "30.00 €",
+              "amount": 30,
+              "currency": "EUR"
+            },
+            "basePrice": null,
+            "priceSavings": {
+              "percent": {
+                "formatted": "0 %",
+                "percentage": 0.0
+              },
+              "regularBulkPrice": {
+                "taxType": "GROSS",
+                "formatted": "30.00 €",
+                "amount": 30,
+                "currency": "EUR"
+              }
+            }
+          },
+          {
+            "quantity": {
+              "amount": 1,
+              "unit": "piece(s)"
+            },
+            "price": {
+              "taxType": "GROSS",
+              "formatted": "40.00 €",
+              "amount": 40,
+              "currency": "EUR"
+            },
+            "basePrice": null,
+            "priceSavings": {
+              "percent": {
+                "formatted": "0 %",
+                "percentage": 0.0
+              },
+              "regularBulkPrice": {
+                "taxType": "GROSS",
+                "formatted": "40.00 €",
+                "amount": 40,
+                "currency": "EUR"
+              }
+            }
+          }
+        ],
+        "customerSpecificPriceInfo": [
+          {
+            "customerGroup": "KG1",
+            "customerGroupId": "63E4F781-CDA5-327F-B72B-C0A802027724",
+            "priceInfo": [
+              {
+                "quantity": {
+                  "amount": 5,
+                  "unit": "piece(s)"
+                },
+                "price": {
+                  "taxType": "GROSS",
+                  "formatted": "50.00 €",
+                  "amount": 50,
+                  "currency": "EUR"
+                },
+                "basePrice": null,
+                "priceSavings": {
+                  "percent": {
+                    "formatted": "10 %",
+                    "percentage": 10.0
+                  },
+                  "regularBulkPrice": {
+                    "taxType": "GROSS",
+                    "formatted": "55.00 €",
+                    "amount": 55,
+                    "currency": "EUR"
+                  }
+                }
+              },
+              {
+                "quantity": {
+                  "amount": 10,
+                  "unit": "piece(s)"
+                },
+                "price": {
+                  "taxType": "GROSS",
+                  "formatted": "45.00 €",
+                  "amount": 45,
+                  "currency": "EUR"
+                },
+                "basePrice": null,
+                "priceSavings": {
+                  "percent": {
+                    "formatted": "0 %",
+                    "percentage": 0.0
+                  },
+                  "regularBulkPrice": {
+                    "taxType": "GROSS",
+                    "formatted": "45.00 €",
+                    "amount": 45,
+                    "currency": "EUR"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "forSale": true,
+        "specialOffer": false,
+        "deliveryWeight": {
+          "amount": 260,
+          "unit": "g"
+        },
+        "availabilityText": "In stock<br />can be shipped within 3-5 days",
+        "availability": "OnStock",
+        "energyLabelsString": "B,G",
+        "energyLabelsMaxEfficiencyString": "A+",
+        "energyLabelSourceFile": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/Products/be_40401/label-1-9dee85f24e1.png",
+        "productDataSheet": null,
+        "sfUrl": "http://pm.epages.com/epages/apidocu.sf/?ObjectPath=/Shops/apidocu/Products/HP-003",
+        "productNumber": "HP-003",
+        "isProductNumberVisible": true,
+        "isNew": false,
+        "isManufacturerPriceRRP": true,
+        "isShippingLinkVisible": true,
+        "isCustomizable": true,
+        "customizableTextLength": 50,
+        "customizableHeadlineText": "Customize your product",
+        "newnessDate": "2023-08-08T00:00:00Z",
+        "refAmount": 1,
+        "refUnit": "piece",
+        "refContentAmount": 1,
+        "priceQuantity": 1,
+        "orderUnit": "piece(s)",
+        "minOrder": 1,
+        "intervalOrder": 1,
+        "productCode": null,
+        "manufacturer": "Bass by Dr.Boom",
+        "upc": null,
+        "ean": null,
+        "essentialFeatures": "Surround Sound\r\nAcoustic Noise Canceling\r\nCorrect fit",
+        "searchKeywords": [
+          "Surround Sound",
+          "Acoustic Noise Canceling",
+          "Correct fit"
+        ],
+        "stocklevel": 100,
+        "minStocklevel": 10,
+        "isInWishlist": false,
+        "videos": [],
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://pm.epages.com/rs/shops/apidocu/products/51E7F905-2E4C-78C2-30C2-AC14145FA4E5"
+          },
+          {
+            "rel": "categories",
+            "href": "https://pm.epages.com/rs/shops/apidocu/categories/?productId=51E7F905-2E4C-78C2-30C2-AC14145FA4E5"
+          },
+          {
+            "rel": "producttype",
+            "href": "https://pm.epages.com/rs/shops/apidocu/producttypes/6489A241-7B85-54B0-0B69-C0A8020205ED"
+          }
+        ]
+      },
+      "lastUpdated": "2016-05-23T08:49:31Z"
+    }
+  ]
+}

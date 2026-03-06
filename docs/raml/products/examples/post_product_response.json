@@ -1,0 +1,99 @@
+{
+  "productId": "57D647C1-77D5-DD52-3024-D5809AB3A134",
+  "name": "Amazing Gracephones",
+  "visible": false,
+  "productVariationType": "regular",
+  "productVariationMasterName": null,
+  "productVariationMasterId": null,
+  "manufacturerProductNumber": null,
+  "productLength": null,
+  "productWidth": null,
+  "productHeight": null,
+  "productVariationSelection": null,
+  "shortDescription": "Awesome new product",
+  "deliveryPeriod": null,
+  "description": "This is a brand new product",
+  "title": "Amazing Gracephones - Technic365",
+  "productImage": null,
+  "images": [],
+  "priceInfo": {
+    "quantity": {
+      "amount": 1,
+      "unit": "piece(s)"
+    },
+    "taxClass": {
+      "taxClassId": "5446685F-A8AF-0E18-9B4F-D5809AB30FBF",
+      "name": "standard",
+      "percentage": 19
+    },
+    "price": {
+      "taxType": "NET",
+      "formatted": "10.99 €",
+      "amount": 10.99,
+      "currency": "EUR"
+    },
+    "depositPrice": null,
+    "ecoParticipationPrice": null,
+    "priceWithDeposits": {
+      "taxType": "NET",
+      "formatted": "10.99 €",
+      "amount": 10.99,
+      "currency": "EUR"
+    },
+    "lowestPrice": null,
+    "lowestRefPriceFormatted": null,
+    "highestPrice": null,
+    "manufacturerPrice": null,
+    "basePrice": null
+  },
+  "forSale": false,
+  "specialOffer": false,
+  "deliveryWeight": null,
+  "availabilityText": "",
+  "availability": null,
+  "energyLabelsString": "A+++",
+  "energyLabelsMaxEfficiencyString": "A+++",
+  "energyLabelSourceFile": "https://pm.epages.com/WebRoot/Store/Shops/apidocu/Products/be_40401/label-1-9dee74f24e1.png",
+  "productDataSheet": null,
+  "sfUrl": "http://pm.epages.com/epages/apidocu.sf/?ObjectPath=/Shops/apidocu/Products/TP-0821",
+  "productNumber": "TP-0821",
+  "isProductNumberVisible": true,
+  "isNew": false,
+  "isManufacturerPriceRRP": true,
+  "isShippingLinkVisible": true,
+  "isCustomizable": true,
+  "customizableTextLength": 50,
+  "customizableHeadlineText": "Customize your product",
+  "newnessDate": "2023-08-08T00:00:00Z",
+  "refAmount": 1,
+  "refUnit": "piece",
+  "refContentAmount": 1,
+  "priceQuantity": 1,
+  "orderUnit": "piece(s)",
+  "minOrder": 1,
+  "intervalOrder": 1,
+  "productCode": null,
+  "manufacturer": "Awesome Products Company",
+  "upc": null,
+  "ean": null,
+  "essentialFeatures": null,
+  "searchKeywords": ["awesome", "product"],
+  "stocklevel": null,
+  "minStocklevel": null,
+  "isInWishlist": false,
+  "videos": [],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://pm.epages.com/rs/shops/apidocu/products/57D647C1-77D5-DD52-3024-D5809AB3A134"
+    },
+    {
+      "rel": "categories",
+      "href": "https://pm.epages.com/rs/shops/apidocu/categories/?productId=57D647C1-77D5-DD52-3024-D5809AB3A134"
+    },
+    {
+      "rel": "producttype",
+      "href": "https://pm.epages.com/rs/shops/apidocu/producttypes/6489A241-7B85-54B0-0B69-C0A8020205ED"
+    }
+  ]
+}

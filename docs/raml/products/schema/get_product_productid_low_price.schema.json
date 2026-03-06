@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "title": "GET Lowest Price Schema",
+  "type": "object",
+  "properties": {
+    "priceInfo": {
+      "type": "object of [simplePriceInfo](page:apps-data-types#simplepriceinfo)",
+      "description": "Price information on the lowest price of the product variation."
+    },
+    "links": {
+      "type": "array of [link](page:apps-data-types#link)",
+      "description": "The link to the product variation with the lowest price."
+    }
+  }
+}

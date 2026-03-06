@@ -1,0 +1,40 @@
+{
+  "name": "epages-rest-node",
+  "version": "1.0.0",
+  "description": "TypeScript/Node.js SDK (ESM) for the ePages Now REST API",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oskari/epages-rest-node.git"
+  },
+  "homepage": "https://github.com/oskari/epages-rest-node#readme",
+  "bugs": {
+    "url": "https://github.com/oskari/epages-rest-node/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "example": "node examples/usage.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.6"
+  }
+}

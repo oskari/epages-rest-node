@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "title": "PUT Slideshow Sequence Schema",
+  "type": "object",
+  "properties": {
+    "": {
+      "type": "array of strings",
+      "description": ""
+    }
+  }
+}

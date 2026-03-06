@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "title": "POST Variations Schema",
+  "type": "object",
+  "properties": {
+    "": {
+      "type": "object of [variation (create request)](page:apps-data-types#variation-create-request)",
+      "description": ""
+    }
+  }
+}

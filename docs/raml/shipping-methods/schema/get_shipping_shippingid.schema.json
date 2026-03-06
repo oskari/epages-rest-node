@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "title": "Get Shipping Method ShippingId Schema",
+  "type": "object",
+  "properties": {
+    "shippingMethodId": {
+      "type": "string",
+      "description": "The unique identifier of the shipping method."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the shipping method."
+    },
+    "description": {
+      "type": "string",
+      "description": "The description of the shipping method."
+    },
+    "logo": {
+      "type": "string",
+      "description": "The logo of the shipping method."
+    },
+    "price": {
+      "type": "object of [price](page:apps-data-types#price)",
+      "description": "The costs for the shipping. If the costs for the shipping can differ, for example for weight-based shipping methods, the minimum costs will be returned."
+    }
+  }
+}
