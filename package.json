@@ -1,6 +1,6 @@
 {
   "name": "epages-rest-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript/Node.js SDK (ESM) for the ePages Now REST API",
   "license": "MIT",
   "repository": {
@@ -23,7 +23,9 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc",
