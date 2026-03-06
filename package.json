@@ -1,6 +1,6 @@
 {
   "name": "epages-rest-node",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "TypeScript/Node.js SDK (ESM) for the ePages Now REST API",
   "license": "MIT",
   "repository": {
@@ -40,9 +40,12 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.6",
-    "api-spec-converter": "^2.12.0",
     "openapi-typescript": "^7.13.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "webapi-parser": "^0.5.0"
+  },
+  "overrides": {
+    "ajv": "^8.12.0"
   }
 }
