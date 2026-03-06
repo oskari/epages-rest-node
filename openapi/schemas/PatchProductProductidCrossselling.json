@@ -1,0 +1,394 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml products/examples/patch_product_productid_crossselling_response.json)",
+  "properties": {
+    "manualCrossSellingTitle": {
+      "type": "string"
+    },
+    "embedded": {
+      "type": "object",
+      "properties": {
+        "results": {
+          "type": "integer"
+        },
+        "page": {
+          "type": "integer"
+        },
+        "resultsPerPage": {
+          "type": "integer"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "productId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "visible": {
+                "type": "boolean"
+              },
+              "shortDescription": {
+                "type": "string",
+                "nullable": true
+              },
+              "deliveryPeriod": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string"
+                    },
+                    "classifier": {
+                      "type": "string"
+                    },
+                    "isZoomEnabled": {
+                      "type": "boolean"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "fileSize": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              },
+              "priceInfo": {
+                "type": "object",
+                "properties": {
+                  "quantity": {
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "type": "integer"
+                      },
+                      "unit": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "taxClass": {
+                    "type": "object",
+                    "properties": {
+                      "taxClassId": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "percentage": {
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "price": {
+                    "type": "object",
+                    "properties": {
+                      "taxType": {
+                        "type": "string"
+                      },
+                      "formatted": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "integer"
+                      },
+                      "currency": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "depositPrice": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "ecoParticipationPrice": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "priceWithDeposits": {
+                    "type": "object",
+                    "properties": {
+                      "taxType": {
+                        "type": "string"
+                      },
+                      "formatted": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "integer"
+                      },
+                      "currency": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "lowestPrice": {
+                    "type": "object",
+                    "properties": {
+                      "taxType": {
+                        "type": "string"
+                      },
+                      "formatted": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "lowestRefPriceFormatted": {
+                    "type": "string"
+                  },
+                  "highestPrice": {
+                    "type": "object",
+                    "properties": {
+                      "taxType": {
+                        "type": "string"
+                      },
+                      "formatted": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "manufacturerPrice": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "basePrice": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "bulkPriceInfo": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "quantity": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "integer"
+                        },
+                        "unit": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "price": {
+                      "type": "object",
+                      "properties": {
+                        "taxType": {
+                          "type": "string"
+                        },
+                        "formatted": {
+                          "type": "string"
+                        },
+                        "amount": {
+                          "type": "integer"
+                        },
+                        "currency": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "basePrice": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "priceSavings": {
+                      "type": "object",
+                      "properties": {
+                        "percent": {
+                          "type": "object",
+                          "properties": {
+                            "formatted": {
+                              "type": "string"
+                            },
+                            "percentage": {
+                              "type": "integer"
+                            }
+                          }
+                        },
+                        "regularBulkPrice": {
+                          "type": "object",
+                          "properties": {
+                            "taxType": {
+                              "type": "string"
+                            },
+                            "formatted": {
+                              "type": "string"
+                            },
+                            "amount": {
+                              "type": "integer"
+                            },
+                            "currency": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "forSale": {
+                "type": "boolean"
+              },
+              "specialOffer": {
+                "type": "boolean"
+              },
+              "deliveryWeight": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "unit": {
+                    "type": "string"
+                  }
+                }
+              },
+              "shippingMethodsRestrictedTo": {
+                "type": "string",
+                "nullable": true
+              },
+              "availabilityText": {
+                "type": "string"
+              },
+              "availability": {
+                "type": "string",
+                "nullable": true
+              },
+              "energyLabelsString": {
+                "type": "string",
+                "nullable": true
+              },
+              "energyLabelSourceFile": {
+                "type": "string",
+                "nullable": true
+              },
+              "productDataSheet": {
+                "type": "string",
+                "nullable": true
+              },
+              "sfUrl": {
+                "type": "string"
+              },
+              "productNumber": {
+                "type": "string"
+              },
+              "isProductNumberVisible": {
+                "type": "boolean"
+              },
+              "newnessDate": {
+                "type": "string"
+              },
+              "refAmount": {
+                "type": "integer"
+              },
+              "refUnit": {
+                "type": "string"
+              },
+              "refContentAmount": {
+                "type": "integer"
+              },
+              "priceQuantity": {
+                "type": "integer"
+              },
+              "orderUnit": {
+                "type": "string"
+              },
+              "minOrder": {
+                "type": "integer"
+              },
+              "intervalOrder": {
+                "type": "integer"
+              },
+              "productCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "manufacturer": {
+                "type": "string"
+              },
+              "upc": {
+                "type": "string",
+                "nullable": true
+              },
+              "ean": {
+                "type": "string",
+                "nullable": true
+              },
+              "essentialFeatures": {
+                "type": "string"
+              },
+              "searchKeywords": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "isInWishlist": {
+                "type": "boolean"
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "rel": {
+                      "type": "string"
+                    },
+                    "href": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

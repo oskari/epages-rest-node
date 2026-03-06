@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml get_shopid_response.json)",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "slogan": {
+      "type": "string"
+    },
+    "logoUrl": {
+      "type": "string"
+    },
+    "sfUrl": {
+      "type": "string"
+    },
+    "mboUrl": {
+      "type": "string"
+    },
+    "isInEU": {
+      "type": "boolean"
+    },
+    "countryCode2": {
+      "type": "string"
+    }
+  }
+}

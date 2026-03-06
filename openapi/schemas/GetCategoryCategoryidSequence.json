@@ -1,0 +1,7 @@
+{
+  "type": "array",
+  "description": "ePages response (inferred from docs/raml categories/examples/get_category_categoryid_sequence_response.json)",
+  "items": {
+    "type": "string"
+  }
+}

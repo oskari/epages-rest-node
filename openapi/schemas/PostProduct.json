@@ -1,0 +1,298 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml products/examples/post_product_response.json)",
+  "properties": {
+    "productId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "productVariationType": {
+      "type": "string"
+    },
+    "productVariationMasterName": {
+      "type": "string",
+      "nullable": true
+    },
+    "productVariationMasterId": {
+      "type": "string",
+      "nullable": true
+    },
+    "manufacturerProductNumber": {
+      "type": "string",
+      "nullable": true
+    },
+    "productLength": {
+      "type": "string",
+      "nullable": true
+    },
+    "productWidth": {
+      "type": "string",
+      "nullable": true
+    },
+    "productHeight": {
+      "type": "string",
+      "nullable": true
+    },
+    "productVariationSelection": {
+      "type": "string",
+      "nullable": true
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "deliveryPeriod": {
+      "type": "string",
+      "nullable": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "productImage": {
+      "type": "string",
+      "nullable": true
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "priceInfo": {
+      "type": "object",
+      "properties": {
+        "quantity": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "integer"
+            },
+            "unit": {
+              "type": "string"
+            }
+          }
+        },
+        "taxClass": {
+          "type": "object",
+          "properties": {
+            "taxClassId": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "percentage": {
+              "type": "integer"
+            }
+          }
+        },
+        "price": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "depositPrice": {
+          "type": "string",
+          "nullable": true
+        },
+        "ecoParticipationPrice": {
+          "type": "string",
+          "nullable": true
+        },
+        "priceWithDeposits": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "lowestPrice": {
+          "type": "string",
+          "nullable": true
+        },
+        "lowestRefPriceFormatted": {
+          "type": "string",
+          "nullable": true
+        },
+        "highestPrice": {
+          "type": "string",
+          "nullable": true
+        },
+        "manufacturerPrice": {
+          "type": "string",
+          "nullable": true
+        },
+        "basePrice": {
+          "type": "string",
+          "nullable": true
+        }
+      }
+    },
+    "forSale": {
+      "type": "boolean"
+    },
+    "specialOffer": {
+      "type": "boolean"
+    },
+    "deliveryWeight": {
+      "type": "string",
+      "nullable": true
+    },
+    "availabilityText": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string",
+      "nullable": true
+    },
+    "energyLabelsString": {
+      "type": "string"
+    },
+    "energyLabelsMaxEfficiencyString": {
+      "type": "string"
+    },
+    "energyLabelSourceFile": {
+      "type": "string"
+    },
+    "productDataSheet": {
+      "type": "string",
+      "nullable": true
+    },
+    "sfUrl": {
+      "type": "string"
+    },
+    "productNumber": {
+      "type": "string"
+    },
+    "isProductNumberVisible": {
+      "type": "boolean"
+    },
+    "isNew": {
+      "type": "boolean"
+    },
+    "isManufacturerPriceRRP": {
+      "type": "boolean"
+    },
+    "isShippingLinkVisible": {
+      "type": "boolean"
+    },
+    "isCustomizable": {
+      "type": "boolean"
+    },
+    "customizableTextLength": {
+      "type": "integer"
+    },
+    "customizableHeadlineText": {
+      "type": "string"
+    },
+    "newnessDate": {
+      "type": "string"
+    },
+    "refAmount": {
+      "type": "integer"
+    },
+    "refUnit": {
+      "type": "string"
+    },
+    "refContentAmount": {
+      "type": "integer"
+    },
+    "priceQuantity": {
+      "type": "integer"
+    },
+    "orderUnit": {
+      "type": "string"
+    },
+    "minOrder": {
+      "type": "integer"
+    },
+    "intervalOrder": {
+      "type": "integer"
+    },
+    "productCode": {
+      "type": "string",
+      "nullable": true
+    },
+    "manufacturer": {
+      "type": "string"
+    },
+    "upc": {
+      "type": "string",
+      "nullable": true
+    },
+    "ean": {
+      "type": "string",
+      "nullable": true
+    },
+    "essentialFeatures": {
+      "type": "string",
+      "nullable": true
+    },
+    "searchKeywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stocklevel": {
+      "type": "string",
+      "nullable": true
+    },
+    "minStocklevel": {
+      "type": "string",
+      "nullable": true
+    },
+    "isInWishlist": {
+      "type": "boolean"
+    },
+    "videos": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,529 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml orders/examples/patch_order_orderid_response.json)",
+  "properties": {
+    "orderId": {
+      "type": "string"
+    },
+    "orderNumber": {
+      "type": "string"
+    },
+    "creationDate": {
+      "type": "string"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "customerNumber": {
+      "type": "string"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "currencyId": {
+      "type": "string"
+    },
+    "taxModel": {
+      "type": "string"
+    },
+    "grandTotal": {
+      "type": "string"
+    },
+    "totalBeforeTax": {
+      "type": "string"
+    },
+    "totalTax": {
+      "type": "string"
+    },
+    "customerComment": {
+      "type": "string"
+    },
+    "internalNote": {
+      "type": "string",
+      "nullable": true
+    },
+    "billingAddress": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "salutation": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "streetDetails": {
+          "type": "string",
+          "nullable": true
+        },
+        "zipCode": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "vatId": {
+          "type": "string",
+          "nullable": true
+        },
+        "birthday": {
+          "type": "string",
+          "nullable": true
+        },
+        "emailAddress": {
+          "type": "string"
+        },
+        "addressExtension": {
+          "type": "string"
+        },
+        "bankAccountHolder": {
+          "type": "string"
+        },
+        "bankAccountNumber": {
+          "type": "string"
+        },
+        "bankName": {
+          "type": "string"
+        },
+        "bankSortCode": {
+          "type": "string"
+        },
+        "businessEmailAddress": {
+          "type": "string"
+        },
+        "businessPhoneNumber": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string",
+          "nullable": true
+        },
+        "displayName": {
+          "type": "string",
+          "nullable": true
+        },
+        "doorCode": {
+          "type": "string",
+          "nullable": true
+        },
+        "faxNumber": {
+          "type": "string"
+        },
+        "fiscalCode": {
+          "type": "string",
+          "nullable": true
+        },
+        "gender": {
+          "type": "string"
+        },
+        "jobTitle": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string",
+          "nullable": true
+        },
+        "mobilePhoneNumber": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "privateEmailAddress": {
+          "type": "string",
+          "nullable": true
+        },
+        "privatePhoneNumber": {
+          "type": "string",
+          "nullable": true
+        },
+        "websiteUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "shippingAddress": {
+      "type": "string",
+      "nullable": true
+    },
+    "shippingData": {
+      "type": "object",
+      "properties": {
+        "shippingMethod": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "price": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "paymentData": {
+      "type": "object",
+      "properties": {
+        "paymentMethod": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "providerName": {
+              "type": "string",
+              "nullable": true
+            },
+            "additionalData": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        },
+        "transactionId": {
+          "type": "string",
+          "nullable": true
+        },
+        "price": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "integer"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "viewedOn": {
+      "type": "string"
+    },
+    "lastUpdatedOnDate": {
+      "type": "string"
+    },
+    "rejectedOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "inProcessOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "pendingOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "readyForDispatchOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "partiallyDispatchedOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "dispatchedOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "deliveredOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "partiallyInvoicedOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "invoicedOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "partiallyPaidOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "paidOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "returnedOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "closedOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "archivedOn": {
+      "type": "string",
+      "nullable": true
+    },
+    "lineItemContainer": {
+      "type": "object",
+      "properties": {
+        "grandTotal": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "totalBeforeTax": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "totalTax": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "integer"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "lineItemsSubTotal": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "productLineItems": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lineItemId": {
+                "type": "string"
+              },
+              "sku": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "productId": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "unit": {
+                    "type": "string"
+                  }
+                }
+              },
+              "lineItemPrice": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "singleItemPrice": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "lineItemCouponDiscount": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string"
+                    },
+                    "classifier": {
+                      "type": "string"
+                    },
+                    "isZoomEnabled": {
+                      "type": "boolean"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "fileSize": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "rel": {
+                      "type": "string"
+                    },
+                    "href": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "essentialFeatures": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "shippingPrice": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

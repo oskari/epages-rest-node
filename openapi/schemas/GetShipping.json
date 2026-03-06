@@ -1,0 +1,40 @@
+{
+  "type": "array",
+  "description": "ePages response (inferred from docs/raml shipping-methods/examples/get_shipping_response.json)",
+  "items": {
+    "type": "object",
+    "properties": {
+      "shippingMethodId": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string",
+        "nullable": true
+      },
+      "logo": {
+        "type": "string",
+        "nullable": true
+      },
+      "price": {
+        "type": "object",
+        "properties": {
+          "taxType": {
+            "type": "string"
+          },
+          "formatted": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "integer"
+          },
+          "currency": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

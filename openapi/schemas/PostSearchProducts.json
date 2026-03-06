@@ -1,0 +1,394 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml search/examples/post_search_products_response.json)",
+  "properties": {
+    "results": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "resultsPerPage": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "productVariationType": {
+            "type": "string"
+          },
+          "productVariationMasterName": {
+            "type": "string",
+            "nullable": true
+          },
+          "productVariationMasterId": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturerProductNumber": {
+            "type": "string"
+          },
+          "productLength": {
+            "type": "string",
+            "nullable": true
+          },
+          "productWidth": {
+            "type": "string",
+            "nullable": true
+          },
+          "productHeight": {
+            "type": "string",
+            "nullable": true
+          },
+          "productVariationSelection": {
+            "type": "string",
+            "nullable": true
+          },
+          "shortDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "deliveryPeriod": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "productImage": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string"
+                },
+                "classifier": {
+                  "type": "string"
+                },
+                "isZoomEnabled": {
+                  "type": "boolean"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "fileSize": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "priceInfo": {
+            "type": "object",
+            "properties": {
+              "quantity": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "unit": {
+                    "type": "string"
+                  }
+                }
+              },
+              "taxClass": {
+                "type": "object",
+                "properties": {
+                  "taxClassId": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "percentage": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "price": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "depositPrice": {
+                "type": "string",
+                "nullable": true
+              },
+              "ecoParticipationPrice": {
+                "type": "string",
+                "nullable": true
+              },
+              "priceWithDeposits": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "manufacturerPrice": {
+                "type": "string",
+                "nullable": true
+              },
+              "basePrice": {
+                "type": "string",
+                "nullable": true
+              },
+              "lowestPrice": {
+                "type": "string",
+                "nullable": true
+              },
+              "lowestRefPriceFormatted": {
+                "type": "string",
+                "nullable": true
+              },
+              "highestPrice": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          },
+          "forSale": {
+            "type": "boolean"
+          },
+          "specialOffer": {
+            "type": "boolean"
+          },
+          "deliveryWeight": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "integer"
+              },
+              "unit": {
+                "type": "string"
+              }
+            }
+          },
+          "availabilityText": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "string"
+          },
+          "energyLabelsString": {
+            "type": "string"
+          },
+          "energyLabelsMaxEfficiencyString": {
+            "type": "string"
+          },
+          "energyLabelSourceFile": {
+            "type": "string"
+          },
+          "productDataSheet": {
+            "type": "string",
+            "nullable": true
+          },
+          "sfUrl": {
+            "type": "string"
+          },
+          "productNumber": {
+            "type": "string"
+          },
+          "isProductNumberVisible": {
+            "type": "boolean"
+          },
+          "isNew": {
+            "type": "boolean"
+          },
+          "isManufacturerPriceRRP": {
+            "type": "boolean"
+          },
+          "isShippingLinkVisible": {
+            "type": "boolean"
+          },
+          "isCustomizable": {
+            "type": "boolean"
+          },
+          "customizableTextLength": {
+            "type": "integer"
+          },
+          "customizableHeadlineText": {
+            "type": "string"
+          },
+          "newnessDate": {
+            "type": "string"
+          },
+          "refAmount": {
+            "type": "integer"
+          },
+          "refUnit": {
+            "type": "string"
+          },
+          "refContentAmount": {
+            "type": "integer"
+          },
+          "priceQuantity": {
+            "type": "integer"
+          },
+          "orderUnit": {
+            "type": "string"
+          },
+          "minOrder": {
+            "type": "integer"
+          },
+          "intervalOrder": {
+            "type": "integer"
+          },
+          "productCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "ean": {
+            "type": "string",
+            "nullable": true
+          },
+          "essentialFeatures": {
+            "type": "string",
+            "nullable": true
+          },
+          "searchKeywords": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "stocklevel": {
+            "type": "integer"
+          },
+          "isInWishlist": {
+            "type": "boolean"
+          },
+          "videos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "minStocklevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rel": {
+                  "type": "string"
+                },
+                "href": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "query": {
+      "type": "string"
+    },
+    "fallbackQuery": {
+      "type": "string"
+    },
+    "facets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "attributeName": {
+            "type": "string"
+          },
+          "attributeType": {
+            "type": "string"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "matches": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "filter": {
+                  "type": "object",
+                  "properties": {
+                    "fieldName": {
+                      "type": "string"
+                    },
+                    "attributeValue": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "selectedValue": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

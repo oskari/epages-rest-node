@@ -1,0 +1,213 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml products/examples/get_product_productid_low_price_response.json)",
+  "properties": {
+    "priceInfo": {
+      "type": "object",
+      "properties": {
+        "price": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "quantity": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "integer"
+            },
+            "unit": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "bulkPriceInfo": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "quantity": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "integer"
+              },
+              "unit": {
+                "type": "string"
+              }
+            }
+          },
+          "price": {
+            "type": "object",
+            "properties": {
+              "taxType": {
+                "type": "string"
+              },
+              "formatted": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "integer"
+              },
+              "currency": {
+                "type": "string"
+              }
+            }
+          },
+          "basePrice": {
+            "type": "string",
+            "nullable": true
+          },
+          "priceSavings": {
+            "type": "object",
+            "properties": {
+              "percent": {
+                "type": "object",
+                "properties": {
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "percentage": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "regularBulkPrice": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "customerSpecificPriceInfo": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "customerGroup": {
+            "type": "string"
+          },
+          "customerGroupId": {
+            "type": "string"
+          },
+          "priceInfo": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "quantity": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "integer"
+                    },
+                    "unit": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "price": {
+                  "type": "object",
+                  "properties": {
+                    "taxType": {
+                      "type": "string"
+                    },
+                    "formatted": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "basePrice": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "priceSavings": {
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "type": "object",
+                      "properties": {
+                        "formatted": {
+                          "type": "string"
+                        },
+                        "percentage": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "regularBulkPrice": {
+                      "type": "object",
+                      "properties": {
+                        "taxType": {
+                          "type": "string"
+                        },
+                        "formatted": {
+                          "type": "string"
+                        },
+                        "amount": {
+                          "type": "integer"
+                        },
+                        "currency": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml tax-model/examples/get_taxmodel_response.json)",
+  "properties": {
+    "model": {
+      "type": "string"
+    },
+    "displayTaxes": {
+      "type": "boolean"
+    },
+    "noTaxesMessage": {
+      "type": "string"
+    },
+    "deliveryThresholdIsActive": {
+      "type": "boolean"
+    },
+    "countryCode2": {
+      "type": "string"
+    }
+  }
+}

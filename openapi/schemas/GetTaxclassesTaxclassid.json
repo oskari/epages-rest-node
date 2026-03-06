@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml tax-classes/examples/get_taxclasses_taxclassid_response.json)",
+  "properties": {
+    "taxClassId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

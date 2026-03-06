@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml legal/examples/put_legal_cookie_response.json)",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "navigationCaption": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

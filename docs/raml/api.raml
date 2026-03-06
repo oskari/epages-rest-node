@@ -8,15 +8,13 @@ securedBy: [OAuth_2.0_Token,oauth_1_0]
 
 securitySchemes:
     - OAuth_2.0_Token:
-        type: x-custom
+        type: OAuth 2.0
         description: OAuth 2.0 token authentication
-        describedBy:
-          headers:
-            Authorization:
-              type: string
-              required: true
-              example: "Bearer "
-              pattern: ^Bearer .+
+        settings:
+          authorizationUri: https://example.com/oauth/authorize
+          accessTokenUri: https://example.com/oauth/token
+          authorizationGrants: [token]
+          scopes: []
     - oauth_1_0:
         description:
             OAuth 1.0 authentification.
@@ -25,6 +23,54 @@ securitySchemes:
           requestTokenUri: /rs/oauth1/request_token
           authorizationUri: /rs/oauth1/authorize
           tokenCredentialsUri: /rs/oauth1/access_token
+    - products_read:
+        type: Basic Authentication
+        description: Products read scope (stub for RAML conversion)
+    - products_write:
+        type: Basic Authentication
+        description: Products write scope (stub for RAML conversion)
+    - products_read_batch:
+        type: Basic Authentication
+        description: Products read batch scope (stub for RAML conversion)
+    - legal_read:
+        type: Basic Authentication
+        description: Legal read scope (stub for RAML conversion)
+    - legal_write:
+        type: Basic Authentication
+        description: Legal write scope (stub for RAML conversion)
+    - coupons_read:
+        type: Basic Authentication
+        description: Coupons read scope (stub for RAML conversion)
+    - coupons_write:
+        type: Basic Authentication
+        description: Coupons write scope (stub for RAML conversion)
+    - newsletters_read:
+        type: Basic Authentication
+        description: Newsletters read scope (stub for RAML conversion)
+    - carts_read:
+        type: Basic Authentication
+        description: Carts read scope (stub for RAML conversion)
+    - orders_write:
+        type: Basic Authentication
+        description: Orders write scope (stub for RAML conversion)
+    - carts_price_write:
+        type: Basic Authentication
+        description: Carts price write scope (stub for RAML conversion)
+    - customers_read:
+        type: Basic Authentication
+        description: Customers read scope (stub for RAML conversion)
+    - customers_write:
+        type: Basic Authentication
+        description: Customers write scope (stub for RAML conversion)
+    - orders_read:
+        type: Basic Authentication
+        description: Orders read scope (stub for RAML conversion)
+    - scripttags_read:
+        type: Basic Authentication
+        description: Script tags read scope (stub for RAML conversion)
+    - scripttags_write:
+        type: Basic Authentication
+        description: Script tags write scope (stub for RAML conversion)
 
 traits: !include traits.raml
 

@@ -1,0 +1,686 @@
+{
+  "type": "object",
+  "description": "ePages Cart (inferred from docs/raml example JSON)",
+  "properties": {
+    "cartId": {
+      "type": "string"
+    },
+    "billingAddress": {
+      "type": "string",
+      "nullable": true
+    },
+    "shippingAddress": {
+      "type": "string",
+      "nullable": true
+    },
+    "lineItemContainer": {
+      "type": "object",
+      "properties": {
+        "grandTotal": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "totalBeforeTax": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "totalTax": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "lineItemsSubTotal": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "productLineItems": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lineItemId": {
+                "type": "string"
+              },
+              "sku": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "productId": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "unit": {
+                    "type": "string"
+                  }
+                }
+              },
+              "lineItemPrice": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "singleItemPrice": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "lineItemCouponDiscount": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string"
+                    },
+                    "classifier": {
+                      "type": "string"
+                    },
+                    "isZoomEnabled": {
+                      "type": "boolean"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "fileSize": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              },
+              "additionalInformation": {
+                "type": "object",
+                "properties": {
+                  "bulkPriceInfo": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "quantity": {
+                          "type": "object",
+                          "properties": {
+                            "amount": {
+                              "type": "integer"
+                            },
+                            "unit": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "price": {
+                          "type": "object",
+                          "properties": {
+                            "taxType": {
+                              "type": "string"
+                            },
+                            "formatted": {
+                              "type": "string"
+                            },
+                            "amount": {
+                              "type": "integer"
+                            },
+                            "currency": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "basePrice": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "priceSavings": {
+                          "type": "object",
+                          "properties": {
+                            "percent": {
+                              "type": "object",
+                              "properties": {
+                                "formatted": {
+                                  "type": "string"
+                                },
+                                "percentage": {
+                                  "type": "integer"
+                                }
+                              }
+                            },
+                            "regularBulkPrice": {
+                              "type": "object",
+                              "properties": {
+                                "taxType": {
+                                  "type": "string"
+                                },
+                                "formatted": {
+                                  "type": "string"
+                                },
+                                "amount": {
+                                  "type": "integer"
+                                },
+                                "currency": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "rel": {
+                      "type": "string"
+                    },
+                    "href": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "intervalOrder": {
+                "type": "string"
+              },
+              "minOrder": {
+                "type": "string"
+              },
+              "orderUnitShort": {
+                "type": "string"
+              },
+              "orderUnit": {
+                "type": "string"
+              },
+              "priceQuantity": {
+                "type": "string"
+              },
+              "quantityPrice": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "variationString": {
+                "type": "string",
+                "nullable": true
+              },
+              "essentialFeatures": {
+                "type": "string",
+                "nullable": true
+              },
+              "taxClass": {
+                "type": "object",
+                "properties": {
+                  "taxClassId": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "percentage": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "deliveryWeight": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "unit": {
+                    "type": "string"
+                  }
+                }
+              },
+              "energyLabelsString": {
+                "type": "string"
+              },
+              "energyLabelsMaxEfficiencyString": {
+                "type": "string"
+              },
+              "energyLabelSourceFile": {
+                "type": "string"
+              },
+              "productDataSheetSourceFile": {
+                "type": "string"
+              },
+              "isInWishlist": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "couponLineItem": {
+          "type": "string",
+          "nullable": true
+        },
+        "shippingPrice": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "deposits": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "ecoParticipations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "shippingOptions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "basketDiscount": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "lineItemPrice": {
+              "type": "object",
+              "properties": {
+                "taxType": {
+                  "type": "string"
+                },
+                "formatted": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "integer"
+                },
+                "currency": {
+                  "type": "string"
+                }
+              }
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "shippingData": {
+      "type": "object",
+      "properties": {
+        "shippingMethod": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "price": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "taxes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "taxClass": {
+                "type": "object",
+                "properties": {
+                  "taxClassId": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "percentage": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "price": {
+                "type": "object",
+                "properties": {
+                  "taxType": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "paymentData": {
+      "type": "object",
+      "properties": {
+        "paymentMethod": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "providerName": {
+              "type": "string"
+            },
+            "additionalData": {
+              "type": "object",
+              "properties": {
+                "InvoiceBankName": {
+                  "type": "string"
+                },
+                "InvoiceAmount": {
+                  "type": "string"
+                },
+                "InvoiceAccountHolderName": {
+                  "type": "string"
+                },
+                "InvoiceIBAN": {
+                  "type": "string"
+                },
+                "InvoiceReferenceNumber": {
+                  "type": "string"
+                },
+                "InvoiceCurrency": {
+                  "type": "string"
+                },
+                "InvoicePaymentDueDate": {
+                  "type": "string"
+                },
+                "InvoiceBIC": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "transactionId": {
+          "type": "string"
+        },
+        "price": {
+          "type": "object",
+          "properties": {
+            "taxType": {
+              "type": "string"
+            },
+            "formatted": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "integer"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "status": {
+          "type": "string",
+          "nullable": true
+        },
+        "taxes": {
+          "type": "string",
+          "nullable": true
+        }
+      }
+    },
+    "minimumCart": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean"
+        },
+        "code": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string",
+          "nullable": true
+        }
+      }
+    },
+    "pickupToken": {
+      "type": "string"
+    },
+    "creationDate": {
+      "type": "string"
+    },
+    "checkoutUrl": {
+      "type": "string"
+    },
+    "registerSessionUrl": {
+      "type": "string"
+    },
+    "cartValidation": {
+      "type": "object",
+      "properties": {
+        "possibleShippingMethods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "potentialBasketDiscounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "absolute": {
+            "type": "object",
+            "properties": {
+              "taxType": {
+                "type": "string"
+              },
+              "formatted": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "integer"
+              },
+              "currency": {
+                "type": "string"
+              }
+            }
+          },
+          "minimumAmount": {
+            "type": "object",
+            "properties": {
+              "taxType": {
+                "type": "string"
+              },
+              "formatted": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "integer"
+              },
+              "currency": {
+                "type": "string"
+              }
+            }
+          },
+          "percent": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

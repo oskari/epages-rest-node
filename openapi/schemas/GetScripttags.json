@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml scripttags/examples/get_scripttags_response.json)",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scriptTagId": {
+            "type": "string"
+          },
+          "scriptUrl": {
+            "type": "string"
+          },
+          "scriptType": {
+            "type": "string"
+          },
+          "createdOn": {
+            "type": "string"
+          },
+          "updatedOn": {
+            "type": "string"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rel": {
+                  "type": "string"
+                },
+                "href": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

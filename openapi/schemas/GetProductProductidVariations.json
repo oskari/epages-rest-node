@@ -1,0 +1,88 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml products/examples/get_product_productid_variations_response.json)",
+  "properties": {
+    "results": {
+      "type": "integer"
+    },
+    "resultsPerPage": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "variationAttributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string"
+                },
+                "displayValue": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "link": {
+            "type": "object",
+            "properties": {
+              "rel": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            }
+          },
+          "attributeSelection": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "displayName": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "displayValue": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml products/examples/post_product_productid_slideshow_response.json)",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "sizes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "classifier": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "isZoomEnabled": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

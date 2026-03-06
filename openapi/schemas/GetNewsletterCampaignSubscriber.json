@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml newsletter/examples/get_newsletter_campaign_subscriber_response.json)",
+  "properties": {
+    "results": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "resultsPerPage": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "subscribed": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

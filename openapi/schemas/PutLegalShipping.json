@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml legal/examples/put_legal_shipping_response.json)",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "navigationCaption": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import type { components } from "../generated/api.js";
 import type { RestClient } from "../rest.js";
 import type {
   ClientDefaults,
@@ -5,6 +6,8 @@ import type {
   ProductsGetParams,
   ProductsListParams,
 } from "../types.js";
+
+type Product = components["schemas"]["GetProductProductid"];
 
 const PATH = "products";
 
@@ -23,7 +26,7 @@ export function createProductsResource(
 ) {
   return {
     /** GET /products — list products (RAML: locale, currency, paged, direction, sort, q, categoryId, id[], includeInvisible). */
-    list<T = unknown>(params?: ProductsListParams): Promise<PagedResponse<T>> {
+    list<T = Product>(params?: ProductsListParams): Promise<PagedResponse<T>> {
       const { locale, currency } = mergeLocaleCurrency(defaults, params);
       const q =
         params || locale || currency
@@ -48,7 +51,7 @@ export function createProductsResource(
     },
 
     /** GET /products/{productId} */
-    get<T = unknown>(
+    get<T = Product>(
       productId: string,
       params?: ProductsGetParams,
     ): Promise<T> {
@@ -61,7 +64,7 @@ export function createProductsResource(
     },
 
     /** POST /products — create product (body + locale, currency). */
-    create<T = unknown>(body: unknown, params?: ProductsGetParams): Promise<T> {
+    create<T = Product>(body: unknown, params?: ProductsGetParams): Promise<T> {
       const { locale, currency } = mergeLocaleCurrency(defaults, params);
       const q =
         locale || currency
@@ -71,7 +74,7 @@ export function createProductsResource(
     },
 
     /** PATCH /products/{productId} — JSON Patch array (RFC 6902). */
-    patch<T = unknown>(
+    patch<T = Product>(
       productId: string,
       operations: unknown[],
       params?: ProductsGetParams,

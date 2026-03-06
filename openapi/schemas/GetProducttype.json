@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml producttypes/examples/get_producttype_response.json)",
+  "properties": {
+    "page": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "productTypeId": {
+            "type": "string"
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "visible": {
+                  "type": "boolean"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "preDefAttribute": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "alias": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "resultsPerPage": {
+      "type": "integer"
+    },
+    "results": {
+      "type": "integer"
+    }
+  }
+}

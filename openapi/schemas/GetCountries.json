@@ -1,0 +1,30 @@
+{
+  "type": "array",
+  "description": "ePages response (inferred from docs/raml countries/examples/get_countries_response.json)",
+  "items": {
+    "type": "object",
+    "properties": {
+      "nativeName": {
+        "type": "string"
+      },
+      "countryIsDefault": {
+        "type": "integer"
+      },
+      "code3": {
+        "type": "string"
+      },
+      "code2": {
+        "type": "string"
+      },
+      "englishName": {
+        "type": "string"
+      },
+      "countryIsEU": {
+        "type": "integer"
+      },
+      "countryID": {
+        "type": "string"
+      }
+    }
+  }
+}

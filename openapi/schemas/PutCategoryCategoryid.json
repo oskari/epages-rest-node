@@ -1,0 +1,99 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml categories/examples/put_category_categoryid_response.json)",
+  "properties": {
+    "categoryId": {
+      "type": "string"
+    },
+    "alias": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "visibleInNavigation": {
+      "type": "boolean"
+    },
+    "pageTitle": {
+      "type": "string"
+    },
+    "navigationCaption": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "specialOffer": {
+      "type": "boolean"
+    },
+    "facetedSearchShowFacetsOnCategory": {
+      "type": "boolean"
+    },
+    "facetedSearchCategoryStartDepth": {
+      "type": "integer"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "classifier": {
+            "type": "string"
+          },
+          "isZoomEnabled": {
+            "type": "boolean"
+          },
+          "width": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "fileSize": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "parent": {
+      "type": "object",
+      "properties": {
+        "rel": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "subCategories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sfUrl": {
+      "type": "string"
+    }
+  }
+}

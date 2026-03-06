@@ -1,0 +1,169 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml customers/examples/get_customer_response.json)",
+  "properties": {
+    "results": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "resultsPerPage": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "customerId": {
+            "type": "string"
+          },
+          "customerNumber": {
+            "type": "string"
+          },
+          "creationDate": {
+            "type": "string"
+          },
+          "billingAddress": {
+            "type": "object",
+            "properties": {
+              "company": {
+                "type": "string"
+              },
+              "salutation": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "street": {
+                "type": "string"
+              },
+              "streetDetails": {
+                "type": "string",
+                "nullable": true
+              },
+              "zipCode": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string",
+                "nullable": true
+              },
+              "country": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string",
+                "nullable": true
+              },
+              "vatId": {
+                "type": "string",
+                "nullable": true
+              },
+              "birthday": {
+                "type": "string",
+                "nullable": true
+              },
+              "emailAddress": {
+                "type": "string"
+              },
+              "addressExtension": {
+                "type": "string"
+              },
+              "bankAccountHolder": {
+                "type": "string"
+              },
+              "bankAccountNumber": {
+                "type": "string"
+              },
+              "bankName": {
+                "type": "string"
+              },
+              "bankSortCode": {
+                "type": "string"
+              },
+              "businessEmailAddress": {
+                "type": "string"
+              },
+              "businessPhoneNumber": {
+                "type": "string"
+              },
+              "department": {
+                "type": "string",
+                "nullable": true
+              },
+              "displayName": {
+                "type": "string",
+                "nullable": true
+              },
+              "doorCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "faxNumber": {
+                "type": "string"
+              },
+              "fiscalCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "gender": {
+                "type": "string"
+              },
+              "jobTitle": {
+                "type": "string"
+              },
+              "middleName": {
+                "type": "string",
+                "nullable": true
+              },
+              "mobilePhoneNumber": {
+                "type": "string"
+              },
+              "phoneNumber": {
+                "type": "string"
+              },
+              "privateEmailAddress": {
+                "type": "string",
+                "nullable": true
+              },
+              "privatePhoneNumber": {
+                "type": "string",
+                "nullable": true
+              },
+              "websiteUrl": {
+                "type": "string"
+              }
+            }
+          },
+          "internalNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rel": {
+                  "type": "string"
+                },
+                "href": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml products/examples/patch_product_productid_customattributes_response.json)",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "displayKey": {
+            "type": "string"
+          },
+          "singleValue": {
+            "type": "boolean"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "displayValue": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string",
+                  "nullable": true
+                }
+              }
+            }
+          },
+          "type": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

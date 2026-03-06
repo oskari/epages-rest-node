@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml legal/examples/get_legal_contact_response.json)",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "navigationCaption": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "contactPerson": {
+      "type": "string"
+    },
+    "contactPersonJobTitle": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}

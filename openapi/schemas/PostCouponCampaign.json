@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml coupon-campaign/examples/post_coupon_campaign_response.json)",
+  "properties": {
+    "campaignId": {
+      "type": "string"
+    },
+    "identifier": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "type": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "waiveShippingCosts": {
+          "type": "boolean"
+        },
+        "amount": {
+          "type": "integer"
+        }
+      }
+    },
+    "minimumOrderValue": {
+      "type": "object",
+      "properties": {
+        "taxType": {
+          "type": "string"
+        },
+        "formatted": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer"
+        },
+        "currency": {
+          "type": "string"
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

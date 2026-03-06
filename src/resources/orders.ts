@@ -1,3 +1,4 @@
+import type { components } from "../generated/api.js";
 import type { RestClient } from "../rest.js";
 import type {
   ClientDefaults,
@@ -5,6 +6,8 @@ import type {
   OrdersListParams,
   PagedResponse,
 } from "../types.js";
+
+type Order = components["schemas"]["GetOrderOrderid"];
 
 const PATH = "orders";
 
@@ -14,7 +17,7 @@ export function createOrdersResource(
 ) {
   return {
     /** GET /orders — list orders (RAML: locale, paged, status filters, customerId, productId, updatedFrom, createdBefore, createdAfter, currency). */
-    list<T = unknown>(params?: OrdersListParams): Promise<PagedResponse<T>> {
+    list<T = Order>(params?: OrdersListParams): Promise<PagedResponse<T>> {
       const merged = {
         ...(defaults && {
           ...(defaults.locale && { locale: defaults.locale }),
@@ -28,7 +31,7 @@ export function createOrdersResource(
     },
 
     /** GET /orders/{orderId} */
-    get<T = unknown>(orderId: string, params?: OrdersGetParams): Promise<T> {
+    get<T = Order>(orderId: string, params?: OrdersGetParams): Promise<T> {
       const locale = params?.locale ?? defaults?.locale;
       const q = locale !== undefined ? { locale } : undefined;
       return rest.get<T>(`${PATH}/${orderId}`, q);

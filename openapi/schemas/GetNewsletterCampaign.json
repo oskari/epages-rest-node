@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml newsletter/examples/get_newsletter_campaign_response.json)",
+  "properties": {
+    "results": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "resultsPerPage": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "campaignId": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "numberOfSubscribers": {
+            "type": "integer"
+          },
+          "subject": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

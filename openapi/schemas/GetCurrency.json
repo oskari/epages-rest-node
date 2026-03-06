@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml currency/examples/get_currency_response.json)",
+  "properties": {
+    "default": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

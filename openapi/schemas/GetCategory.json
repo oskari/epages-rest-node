@@ -1,0 +1,62 @@
+{
+  "type": "array",
+  "description": "ePages response (inferred from docs/raml categories/examples/get_category_response.json)",
+  "items": {
+    "type": "object",
+    "properties": {
+      "categoryId": {
+        "type": "string"
+      },
+      "alias": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "visible": {
+        "type": "boolean"
+      },
+      "visibleInNavigation": {
+        "type": "boolean"
+      },
+      "pageTitle": {
+        "type": "string"
+      },
+      "navigationCaption": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "specialOffer": {
+        "type": "boolean"
+      },
+      "facetedSearchShowFacetsOnCategory": {
+        "type": "boolean"
+      },
+      "facetedSearchCategoryStartDepth": {
+        "type": "integer"
+      },
+      "subCategories": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "rel": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "sfUrl": {
+        "type": "string"
+      }
+    }
+  }
+}

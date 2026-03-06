@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml tax-classes/examples/get_taxclasses_response.json)",
+  "properties": {
+    "results": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "resultsPerPage": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "taxClassId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rel": {
+                  "type": "string"
+                },
+                "href": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "defaultTaxClass": {
+      "type": "object",
+      "properties": {
+        "taxClassId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rel": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "defaultTaxClassDigital": {
+      "type": "object",
+      "properties": {
+        "taxClassId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rel": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

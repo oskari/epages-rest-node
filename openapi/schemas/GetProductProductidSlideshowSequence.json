@@ -1,0 +1,7 @@
+{
+  "type": "array",
+  "description": "ePages response (inferred from docs/raml products/examples/get_product_productid_slideshow_sequence_response.json)",
+  "items": {
+    "type": "string"
+  }
+}

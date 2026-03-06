@@ -19,6 +19,13 @@
     "indentWidth": 2
   },
   "files": {
-    "includes": ["**", "!node_modules", "!dist", "!.vscode"]
+    "includes": [
+      "**",
+      "!node_modules",
+      "!dist",
+      "!.vscode",
+      "!src/generated",
+      "!openapi/schemas"
+    ]
   }
 }

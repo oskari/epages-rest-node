@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "description": "ePages response (inferred from docs/raml search/examples/get_search_productsuggest_response.json)",
+  "properties": {
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string"
+                },
+                "classifier": {
+                  "type": "string"
+                },
+                "isZoomEnabled": {
+                  "type": "boolean"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "fileSize": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "link": {
+            "type": "object",
+            "properties": {
+              "rel": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
