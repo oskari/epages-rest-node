@@ -1,6 +1,6 @@
 # ePages REST SDK (Node.js)
 
-TypeScript/Node.js SDK (ESM) for the [ePages Now REST API](https://developer.epages.com/apps/). Supports **products**, **orders**, and **customers**. Requires Node.js 20+.
+TypeScript/Node.js SDK (ESM) for the [ePages Now REST API](https://developer.epages.com/apps/). Supports **products**, **orders**, and **customers**. Requires Node.js 22+.
 
 This project is not affiliated with, endorsed by, or connected to ePages GmbH.
 

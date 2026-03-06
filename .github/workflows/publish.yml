@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: "20"
+  NODE_VERSION: "22"
 
 jobs:
   ci:
@@ -33,6 +33,7 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
+      id-token: write
       contents: write
     steps:
       - uses: actions/checkout@v4
@@ -47,9 +48,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish --access public
 
       - name: Extract release notes from CHANGELOG
         run: |
