@@ -1,9 +1,13 @@
+import { createRequire } from "node:module";
 import { ApiError, TooManyRequestsError } from "./errors.js";
+
+const require = createRequire(import.meta.url);
+const { version } = require("../package.json") as { version: string };
 
 const ACCEPT = "application/vnd.epages.v1+json";
 const CONTENT_TYPE_JSON = "application/json";
 const CONTENT_TYPE_JSON_PATCH = "application/json-patch+json";
-const USER_AGENT = "epages-rest-node/1.0.0";
+const USER_AGENT = `epages-rest-node/${version}`;
 
 export interface RestClientOptions {
   host: string;

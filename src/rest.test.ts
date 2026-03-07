@@ -1,6 +1,17 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { ApiError, TooManyRequestsError } from "./errors.js";
 import { createRestClient } from "./rest.js";
+
+/** RequestInit with headers as a plain object (how rest.ts passes them). */
+type InitWithRecordHeaders = RequestInit & { headers: Record<string, string> };
+
+function getLastFetchCall(mock: ReturnType<typeof vi.fn>) {
+  const call = mock.mock.calls[0];
+  return {
+    url: call?.[0],
+    init: call?.[1] as InitWithRecordHeaders | undefined,
+  };
+}
 
 /**
  * REST layer tests derived from API docs:
@@ -18,6 +29,11 @@ describe("createRestClient", () => {
 
   beforeEach(() => {
     mockFetch = vi.fn();
+    vi.stubGlobal("fetch", mockFetch);
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
   });
 
   it("builds correct base URL for GET (docs: base path /rs/shops/{shopId}/)", async () => {
@@ -27,11 +43,11 @@ describe("createRestClient", () => {
         headers: { "Content-Type": "application/json" },
       }),
     );
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
     await rest.get("products");
 
     expect(mockFetch).toHaveBeenCalledTimes(1);
-    expect(mockFetch.mock.calls[0][0]).toBe(
+    expect(getLastFetchCall(mockFetch).url).toBe(
       "https://www.example.com/rs/shops/TestShop/products",
     );
   });
@@ -43,10 +59,10 @@ describe("createRestClient", () => {
         headers: { "Content-Type": "application/json" },
       }),
     );
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
     await rest.get("products", { locale: "de_DE", currency: "EUR", page: 2 });
 
-    const url = mockFetch.mock.calls[0][0];
+    const { url } = getLastFetchCall(mockFetch);
     expect(url).toContain("locale=de_DE");
     expect(url).toContain("currency=EUR");
     expect(url).toContain("page=2");
@@ -59,13 +75,15 @@ describe("createRestClient", () => {
         headers: { "Content-Type": "application/json" },
       }),
     );
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
     await rest.get("products");
 
-    const init = mockFetch.mock.calls[0][1];
+    const { init } = getLastFetchCall(mockFetch);
+    expect(init).toBeDefined();
+    if (!init) return;
     expect(init.headers.Accept).toBe("application/vnd.epages.v1+json");
     expect(init.headers.Authorization).toBe("Bearer test-token");
-    expect(init.headers["User-Agent"]).toBe("epages-rest-node/1.0.0");
+    expect(init.headers["User-Agent"]).toMatch(/^epages-rest-node\/[\d.]+$/);
     expect(init.headers["Content-Type"]).toBe("application/json");
   });
 
@@ -76,10 +94,12 @@ describe("createRestClient", () => {
         headers: { "Content-Type": "application/json" },
       }),
     );
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
     await rest.post("products", { name: "Foo" });
 
-    const init = mockFetch.mock.calls[0][1];
+    const { init } = getLastFetchCall(mockFetch);
+    expect(init).toBeDefined();
+    if (!init) return;
     expect(init.method).toBe("POST");
     expect(init.headers["Content-Type"]).toBe("application/json");
     expect(init.body).toBe(JSON.stringify({ name: "Foo" }));
@@ -92,12 +112,14 @@ describe("createRestClient", () => {
         headers: { "Content-Type": "application/json" },
       }),
     );
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
     await rest.patch("products/id-1", [
       { op: "replace", path: "/name", value: "New" },
     ]);
 
-    const init = mockFetch.mock.calls[0][1];
+    const { init } = getLastFetchCall(mockFetch);
+    expect(init).toBeDefined();
+    if (!init) return;
     expect(init.method).toBe("PATCH");
     expect(init.headers["Content-Type"]).toBe("application/json-patch+json");
     expect(init.body).toBe(
@@ -107,7 +129,7 @@ describe("createRestClient", () => {
 
   it("DELETE returns void on 204 No Content (docs: response codes)", async () => {
     mockFetch.mockResolvedValueOnce(new Response(undefined, { status: 204 }));
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
     const result = await rest.delete("products/id-1");
     expect(result).toBeUndefined();
   });
@@ -119,7 +141,7 @@ describe("createRestClient", () => {
         headers: { "Content-Type": "application/json" },
       }),
     );
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
 
     try {
       await rest.get("products");
@@ -137,7 +159,7 @@ describe("createRestClient", () => {
         headers: { "Content-Type": "application/json" },
       }),
     );
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
 
     try {
       await rest.get("products/bad-id");
@@ -155,10 +177,10 @@ describe("createRestClient", () => {
         headers: { "Content-Type": "application/json" },
       }),
     );
-    const rest = createRestClient({ host, shop, token, fetch: mockFetch });
+    const rest = createRestClient({ host, shop, token });
     await rest.get("products", { id: ["id1", "id2"] });
 
-    const url = mockFetch.mock.calls[0][0];
+    const { url } = getLastFetchCall(mockFetch);
     expect(url).toContain("id=id1");
     expect(url).toContain("id=id2");
   });

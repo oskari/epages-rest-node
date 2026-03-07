@@ -1,6 +1,6 @@
 {
   "name": "epages-rest-node",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "TypeScript/Node.js SDK (ESM) for the ePages Now REST API",
   "license": "MIT",
   "repository": {
@@ -36,10 +36,16 @@
     "example": "node examples/usage.mjs",
     "generate:openapi": "node scripts/generate-openapi.cjs && node scripts/generate-schemas-from-examples.cjs && node scripts/inject-schemas.cjs",
     "generate:types": "openapi-typescript openapi/api.yaml -o src/generated/api.d.ts",
-    "generate:api": "npm run generate:openapi && npm run generate:types"
+    "generate:api": "npm run generate:openapi && npm run generate:types",
+    "release": "node scripts/release.cjs",
+    "release:patch": "node scripts/release.cjs patch",
+    "release:minor": "node scripts/release.cjs minor",
+    "release:major": "node scripts/release.cjs major",
+    "release:retag": "node scripts/retag.cjs"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.6",
+    "@types/node": "^22.10.0",
     "openapi-typescript": "^7.13.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18",

@@ -4,10 +4,13 @@ import type {
   ClientDefaults,
   PagedResponse,
   ProductsGetParams,
+  ProductsGetWithVariationsParams,
   ProductsListParams,
+  ProductsVariationsParams,
 } from "../types.js";
 
 type Product = components["schemas"]["GetProductProductid"];
+type ProductVariations = components["schemas"]["GetProductProductidVariations"];
 
 const PATH = "products";
 
@@ -18,6 +21,20 @@ function mergeLocaleCurrency(
   const locale = params?.locale ?? defaults?.locale;
   const currency = params?.currency ?? defaults?.currency;
   return { locale, currency };
+}
+
+function mergeVariationsParams(
+  defaults: ClientDefaults | undefined,
+  params: ProductsVariationsParams | undefined,
+) {
+  const locale = params?.locale ?? defaults?.locale;
+  return {
+    ...(locale && { locale }),
+    ...(params?.page !== undefined && { page: params.page }),
+    ...(params?.resultsPerPage !== undefined && {
+      resultsPerPage: params.resultsPerPage,
+    }),
+  };
 }
 
 export function createProductsResource(
@@ -90,6 +107,48 @@ export function createProductsResource(
     /** DELETE /products/{productId} */
     delete(productId: string): Promise<void> {
       return rest.delete(`${PATH}/${productId}`);
+    },
+
+    /** GET /products/{productId}/variations — list product variations. */
+    variations<T = ProductVariations>(
+      productId: string,
+      params?: ProductsVariationsParams,
+    ): Promise<T> {
+      const q = mergeVariationsParams(defaults, params);
+      const query = Object.keys(q).length ? q : undefined;
+      return rest.get<T>(`${PATH}/${productId}/variations`, query);
+    },
+
+    /** POST /products/{productId}/variations — create product variations. */
+    createVariations(
+      productId: string,
+      body: unknown,
+      _params?: ProductsGetParams,
+    ): Promise<void> {
+      return rest.post<void>(`${PATH}/${productId}/variations`, body);
+    },
+
+    /** Fetches the product and its variations in one call (GET product + GET variations in parallel). */
+    getWithVariations<T = Product>(
+      productId: string,
+      params?: ProductsGetWithVariationsParams,
+    ): Promise<{ product: T; variations: ProductVariations }> {
+      const { locale, currency } = mergeLocaleCurrency(defaults, params);
+      const productQ =
+        locale || currency
+          ? { ...(locale && { locale }), ...(currency && { currency }) }
+          : undefined;
+      const variationsQ = mergeVariationsParams(defaults, params);
+      const variationsQuery = Object.keys(variationsQ).length
+        ? variationsQ
+        : undefined;
+      return Promise.all([
+        rest.get<T>(`${PATH}/${productId}`, productQ),
+        rest.get<ProductVariations>(
+          `${PATH}/${productId}/variations`,
+          variationsQuery,
+        ),
+      ]).then(([product, variations]) => ({ product, variations }));
     },
   };
 }

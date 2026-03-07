@@ -55,6 +55,21 @@ export interface ProductsGetParams {
   currency?: string;
 }
 
+/** Query params for GET /products/{productId}/variations (list variations). */
+export interface ProductsVariationsParams {
+  locale?: string;
+  page?: number;
+  resultsPerPage?: number;
+}
+
+/** Query params for getWithVariations (product get + variations list). */
+export interface ProductsGetWithVariationsParams {
+  locale?: string;
+  currency?: string;
+  page?: number;
+  resultsPerPage?: number;
+}
+
 /** Query params for orders list (from orders.raml). */
 export interface OrdersListParams {
   locale?: string;
